@@ -1,0 +1,26 @@
+[
+  {
+    "id": "643406abd59bb66a1873c169",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7X0wkhMrTjpmFwrtjk1Ooe7Hv0T48PPm8iQ&usqp=CAU",
+    "name": "Account & Finance",
+    "description": "300 Jobs Available"
+  },
+  {
+    "id": "643406ab2b3fabee4c9eda05",
+    "img": "https://c8.alamy.com/comp/2BH1HB2/light-bulb-and-pencil-logo-template-creative-idea-vector-design-smart-writer-logotype-eps-10-2BH1HB2.jpg",
+    "name": "Creative Design",
+    "description": "100+ Jobs Available"
+  },
+  {
+    "id": "643406ab563f1b167f52e29f",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzW0aAkIPYtZyu04ZXEbmqLXHmYjMqNV0z4g&usqp=CAU",
+    "name": "Marketing & Sales",
+    "description": "150 Jobs Available"
+  },
+  {
+    "id": "643406abdf49282ff6ca8a5f",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQszw9cZ7HZ5CFry0t8hOnHdMhNCofG-tYQPw&usqp=CAU",
+    "name": "Engineering Job",
+    "description": "224 Jobs Available"
+  }
+]
