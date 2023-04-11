@@ -3,16 +3,19 @@ import { useLoaderData } from "react-router-dom";
 import CategoryList from "../CategoryList/CategoryList";
 import Header from "../Header/Header";
 import FeaturedJobs from "../FeaturedJobs/FeaturedJobs";
+import JobDetails from "../JobDetails/JobDetails";
 
 const Home = () => {
-  const categorys = useLoaderData();
-  const [jobs, setJobs] = useState([]);
+  const jobs = useLoaderData();
+  const [categorys, setCategorys] = useState([]);
 
   useEffect(() => {
-    fetch("featureds.json")
+    fetch("categorys.json")
       .then((res) => res.json())
-      .then((data) => setJobs(data));
+      .then((data) => setCategorys(data));
   }, []);
+
+  
 
   return (
     <div>
@@ -26,9 +29,14 @@ const Home = () => {
           </p>
         </div>
         <div className="lg:grid grid-cols-4 gap-6 mx-4 mb-32">
-          {categorys.map((category) => (
-            <CategoryList key={category.id} category={category}></CategoryList>
-          ))}
+          {
+            categorys.map((category) => (
+              <CategoryList 
+               key={category.id}
+               category={category}
+               ></CategoryList>
+            ))
+          }
         </div>
       </section>
 
@@ -41,9 +49,14 @@ const Home = () => {
           </p>
         </div>
         <div className="lg:grid grid-cols-2">
-          {jobs.map((job) => (
-            <FeaturedJobs key={job.id} job={job}></FeaturedJobs>
-          ))}
+          {
+            jobs.map((job) => (
+              <FeaturedJobs 
+                key={job.id} 
+                job={job} 
+              ></FeaturedJobs>
+            ))
+          }
         </div>
       </section>
     </div>

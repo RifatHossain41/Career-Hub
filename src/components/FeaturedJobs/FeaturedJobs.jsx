@@ -1,11 +1,20 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationDot,faDollar } from '@fortawesome/free-solid-svg-icons';
+import JobDetails from '../JobDetails/JobDetails';
+import { Link, useNavigate } from 'react-router-dom';
 
 
 
 const FeaturedJobs = ({job}) => {
   const {id, company_logo, duty, duty_time, title, address, company_name, salary} = job;
+  
+  // const navigate = useNavigate();
+
+
+  // const handleNavigation = () => {
+  //   navigate(`/jobDetails/${id}`);
+  // }
   return (
     <div className="border m-6 p-10 rounded">
       <img className="w-60 h-14 mb-8" src={company_logo} alt="" />
@@ -19,8 +28,7 @@ const FeaturedJobs = ({job}) => {
         <p className='ml-3'><FontAwesomeIcon icon={faLocationDot} /> {address}</p>
         <p className='ml-6'><FontAwesomeIcon icon={faDollar} /> Salary: {salary}</p>
       </div>
-      <button className="border border-slate-400 px-5 py-2 rounded text-white bg-indigo-400">View Details</button>
-
+      <button className="border border-slate-400 px-5 py-2 rounded text-white bg-indigo-400"  >View Details</button>
     </div>
   );
 };
