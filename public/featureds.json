@@ -1,0 +1,42 @@
+[
+  {
+    "id": "6434345dc82db210beef25de",
+    "company_logo": "https://cdn.mos.cms.futurecdn.net/rjqJEKv6P9Yjy9d3KMGvp8.jpg",
+    "duty": "Remote",
+    "duty_time": "Full Time",
+    "title": "Technical Database Engineer",
+    "address": "Dhaka, Bangladesh",
+    "company_name": "Google LLC",
+    "salary": "100K - 150K"
+  },
+  {
+    "id": "6434345daac353051ad08d3c",
+    "company_logo": "https://www.movingbrands.com/cache/public/project-images-1575892209-1a82f4ff69336e2a7eec7df8f5f950bc-CROP-1200x630.png",
+    "duty": "Onsite",
+    "duty_time": "Full Time",
+    "title": "Senior Product Designer",
+    "address": "Dhaka, Bangladesh",
+    "company_name": "Netflix",
+    "salary": "90K - 120K"
+  },
+  {
+    "id": "6434345d7927d919376568ab",
+    "company_logo": "https://logowik.com/content/uploads/images/tesla.jpg",
+    "duty": "Onsite",
+    "duty_time": "Part Time",
+    "title": "Software Engineer",
+    "address": "Chittagong, Bangladesh",
+    "company_name": "Tesla",
+    "salary": "60K - 90K"
+  },
+  {
+    "id": "6434345d78529b8152051555",
+    "company_logo": "https://logos-world.net/wp-content/uploads/2020/04/Facebook-Logo.png",
+    "duty": "Remote",
+    "duty_time": "Full Time",
+    "title": "Software Engineer",
+    "address": "Dhaka, Bangladesh",
+    "company_name": "Facebook",
+    "salary": "200K - 250K"
+  }
+]

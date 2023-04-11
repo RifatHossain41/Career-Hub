@@ -1,7 +1,7 @@
 import React from 'react';
 
 const CategoryList = ({category}) => {
-  const {id, name, img, description} = category
+  const {id, name, img, description} = category;
   return (
     <div className="bg-slate-200 rounded p-6">
       <img className="w-10 mb-8" src={img} alt="" />
