@@ -11,7 +11,7 @@ const Statistics = () => {
     { name: 'Assignment-5', value: 51 },
     { name: 'Assignment-6', value: 60 },
     { name: 'Assignment-7', value: 59 },
-    { name: 'Assignment-8', value: 60 },
+    { name: 'Assignment-8', value: 60 }, 
   ];
 
   return (

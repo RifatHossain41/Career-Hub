@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+import App from './App'
 import './index.css'
 import {
   createBrowserRouter,
@@ -19,8 +20,7 @@ const router = createBrowserRouter([
     children: [
      {
       path: "/",
-      element: <Home></Home>,
-      loader: () => fetch('featureds.json')
+      element: <Home></Home>
      },
      {
       path: "/statistics",
@@ -35,9 +35,9 @@ const router = createBrowserRouter([
       element: <Blog></Blog>
      },
      {
-      path: "jobDetails/:jobDetailsId",
+      path: "/jobDetails/:id",
       element: <JobDetails></JobDetails>,
-    
+      loader: ({params}) => fetch('/featureds.json')
      }
     ]
   },

@@ -6,14 +6,21 @@ import FeaturedJobs from "../FeaturedJobs/FeaturedJobs";
 import JobDetails from "../JobDetails/JobDetails";
 
 const Home = () => {
-  const jobs = useLoaderData();
+
   const [categorys, setCategorys] = useState([]);
+  const [jobs, setJobs] = useState([])
 
   useEffect(() => {
-    fetch("categorys.json")
+    fetch("/categorys.json")
       .then((res) => res.json())
       .then((data) => setCategorys(data));
   }, []);
+
+  useEffect(() => {
+    fetch("/featureds.json")
+      .then(res => res.json())
+      .then(data => setJobs(data))
+  }, [])
 
   
 
