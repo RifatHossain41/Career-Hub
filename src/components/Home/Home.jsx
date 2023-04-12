@@ -35,6 +35,7 @@ const Home = () => {
 
  }, []);
 
+
  useEffect(() => {
   const storedCart = getShoppingCart();
   const savedCart = [];

@@ -2,29 +2,31 @@ import React, { useEffect, useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 
 const AppliedJobs = () => {
+  
 
   // const [cart, setCart] = useState(savedCart);
 
-  const shoppingCart = useLoaderData();
+  const applied = useLoaderData();
+  console.log(applied)
  
-  const [jobs, setJobs] = useState([])
+  // const [jobs, setJobs] = useState([])
 
-  const apply = JSON.parse(localStorage.getItem('shopping-cart'))
-  console.log(jobs);
+  // const apply = JSON.parse(localStorage.getItem('shopping-cart'))
+  // // console.log(jobs);
 
-  useEffect(() => {
-    fetch("/featureds.json")
-      .then(res => res.json())
-      .then(data => setJobs(data))
-  }, [apply])
+  // useEffect(() => {
+  //   fetch("/featureds.json")
+  //     .then(res => res.json())
+  //     .then(data => setJobs(data))
+  // }, [apply])
 
-  const storedItem = jobs.filter(job => job.id === job.id)
+  // const storedItem = jobs.filter(job => job.id === job.id)
 
   return (
     <div>
-      {
+      {/* {
         storedItem.map(item => <p>{item.title}</p>)
-      }
+      } */}
     </div>
   );
 };

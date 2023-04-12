@@ -3,7 +3,6 @@ import React from 'react';
 const Blog = () => {
   return (
     <div className="text-3xl font-bold">
-      <h2>This is blog page</h2>
       <br />
       <h2>1. When should you used context api?</h2>
       <p>Ans: Context api used some data needs to be accessible by many components at different nesting levels.</p>
