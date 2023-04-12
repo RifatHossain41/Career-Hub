@@ -4,7 +4,7 @@ import { addToDb, getShoppingCart } from '../../utilities/fakedb';
 import CategoryList from "../CategoryList/CategoryList";
 import Header from "../Header/Header";
 import FeaturedJobs from "../FeaturedJobs/FeaturedJobs";
-import JobDetails from "../JobDetails/JobDetails";
+
 
 const Home = () => {
 
@@ -53,12 +53,7 @@ const Home = () => {
    setCart(savedCart);
  }, [applied])
 
-//  const handleAddToCart = (apply) => {
-//   const newCart = [...cart, apply];
-//   setCart(newCart)
-//   addToDb(apply.id)
-//   console.log(apply)
-// } 
+ 
 
 
   return (

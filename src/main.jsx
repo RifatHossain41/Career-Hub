@@ -37,8 +37,7 @@ const router = createBrowserRouter([
      {
       path: "/jobDetails/:id",
       element: <JobDetails></JobDetails>,
-      loader: () => fetch('featureds.json')
-      // loader: ({params}) => fetch('/featureds.json')
+      loader: ({params}) => fetch('/featureds.json')
      }
     ]
   },

@@ -1,9 +1,8 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationDot,faDollar } from '@fortawesome/free-solid-svg-icons';
-import JobDetails from '../JobDetails/JobDetails';
 import { Link, useNavigate } from 'react-router-dom';
-import AppliedJobs from '../AppliedJobs/AppliedJobs';
+
 
 
 
