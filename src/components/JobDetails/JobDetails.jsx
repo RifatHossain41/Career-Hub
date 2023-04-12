@@ -8,12 +8,18 @@ import {
   faPhone,
   faEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
+import { addToDb, getShoppingCart } from "../../utilities/fakedb";
 
-const JobDetails = () => {
+const JobDetails = (props) => {
+  const [applied, setApplied] = useState([]);
+  const [cart, setCart] = useState([]);
+
   const details = useLoaderData();
+
 
   const { id } = useParams();
   const [jobs, setJobs] = useState([]);
+  console.log(id)
 
   useEffect(() => {
     fetch("featureds.json")
@@ -34,8 +40,15 @@ const JobDetails = () => {
     salary,
     address,
   } = storedData;
+
+  
+   const handleAddToCart = (id) => {
+    addToDb(id)
+    console.log(id)
+  } 
+  
   return (
-    <div className="grid grid-cols-3 gap-6 mt-8 mx-2">
+    <div className="lg:grid grid-cols-3 gap-6 mt-8 mx-2">
       <div className="col-span-2">
         <h4 className="mb-6">
           <span className="font-bold">Job Description: </span>
@@ -90,7 +103,7 @@ const JobDetails = () => {
           <span className="font-bold">Address: </span>
           {address}
         </p>
-        <button className=" w-full border border-slate-400 px-5 py-2 rounded text-white bg-indigo-400">
+        <button onClick={()=> handleAddToCart(id)}  className=" w-full border border-slate-400 px-5 py-2 rounded text-white bg-indigo-400" >
           Apply Now
         </button>
       </div>

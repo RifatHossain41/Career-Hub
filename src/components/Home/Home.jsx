@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
+import { addToDb, getShoppingCart } from '../../utilities/fakedb';
 import CategoryList from "../CategoryList/CategoryList";
 import Header from "../Header/Header";
 import FeaturedJobs from "../FeaturedJobs/FeaturedJobs";
@@ -9,6 +10,8 @@ const Home = () => {
 
   const [categorys, setCategorys] = useState([]);
   const [jobs, setJobs] = useState([])
+  const [applied, setApplied] = useState([]);
+  const [cart, setCart] = useState([]);
 
   useEffect(() => {
     fetch("/categorys.json")
@@ -22,7 +25,40 @@ const Home = () => {
       .then(data => setJobs(data))
   }, [])
 
-  
+ 
+
+ useEffect( () => {
+   
+  fetch('/featureds.json')
+    .then(res => res.json())
+    .then(data => setApplied(data))
+
+ }, []);
+
+ useEffect(() => {
+  const storedCart = getShoppingCart();
+  const savedCart = [];
+  for(const id in storedCart){
+    const addedJob = applied.find(apply => apply.id === id);
+
+    if(addedJob){
+      const value = storedCart[id];
+      addedJob.value = value
+
+      savedCart.push(addedJob);
+    }
+  }
+
+   setCart(savedCart);
+ }, [applied])
+
+//  const handleAddToCart = (apply) => {
+//   const newCart = [...cart, apply];
+//   setCart(newCart)
+//   addToDb(apply.id)
+//   console.log(apply)
+// } 
+
 
   return (
     <div>
@@ -60,7 +96,8 @@ const Home = () => {
             jobs.map((job) => (
               <FeaturedJobs 
                 key={job.id} 
-                job={job} 
+                job={job}
+               
               ></FeaturedJobs>
             ))
           }

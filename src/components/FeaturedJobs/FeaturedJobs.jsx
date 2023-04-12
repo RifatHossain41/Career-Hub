@@ -3,12 +3,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationDot,faDollar } from '@fortawesome/free-solid-svg-icons';
 import JobDetails from '../JobDetails/JobDetails';
 import { Link, useNavigate } from 'react-router-dom';
+import AppliedJobs from '../AppliedJobs/AppliedJobs';
 
 
 
-const FeaturedJobs = ({job}) => {
+const FeaturedJobs = ({job, handleAddToCart}) => {
   const {id, company_logo, duty, duty_time, title, address, company_name, salary} = job;
-  
+
   return (
     <div className="border m-6 p-10 rounded">
       <img className="w-60 h-14 mb-8" src={company_logo} alt="" />
@@ -22,7 +23,7 @@ const FeaturedJobs = ({job}) => {
         <p><FontAwesomeIcon className='mr-2' icon={faLocationDot} /> {address}</p>
         <p><FontAwesomeIcon className='mr-2' icon={faDollar} /> Salary: {salary}</p>
       </div>
-      <Link to={`/jobDetails/${id}`}><button className="border border-slate-400 px-5 py-2 rounded text-white bg-indigo-400"  >View Details</button></Link>
+      <Link to={`/jobDetails/${id}`}><button className="border border-slate-400 px-5 py-2 rounded text-white bg-indigo-400" handleAddToCart={handleAddToCart} > Details</button></Link>
     </div>
   );
 };
